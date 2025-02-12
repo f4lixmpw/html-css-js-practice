@@ -1,0 +1,47 @@
+<!-- # Creating an HTML file from the extracted code
+html_code = """<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Example</title>
+</head>
+<body>
+
+    <div id="output"> something </div>
+    <button onclick="update()"> Submit </button>
+
+    <script>
+        function update(){
+            document.getElementById('output').innerHTML = 'new stuff';
+        }
+    </script>
+
+    <br><br>
+
+    <div id="output"> Please enter username: </div>
+    <input id="input" type="text">
+    <button onclick="validate()"> Submit </button>
+
+    <script>
+        function vaildate(){
+            if (document.getElementById("input").value.length == 0) {
+                document.getElementById("output").innerHTML = "Cannot be blank";
+            } else {
+                document.getElementById("output").innerHTML = "User submitted";
+            }
+        }
+    </script>
+
+</body>
+</html> -->
+<div id="output"> Please enter username: </div>
+<input id="input">
+<button onclick="hello ()"> Submit </button>
+<script>
+    function hello(){
+        let name = document.getElementById("input").value  
+        document.getElementById("output").innerHTML = "hello " + name
+    }
+</script>
